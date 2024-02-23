@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSIDAD CAROLINA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0F0F0; /* Fondo Gris claro */
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 5px solid #6C4A4E; /* Marco Morado oscuro */
+            padding: 20px;
+            background-color: #FFFFFF; /* Fondo Blanco */
+            border-radius: 10px; /* Borde redondeado */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #6C4A4E; /* Fondo Morado oscuro */
+            color: white;
+            border-radius: 10px 10px 0 0; /* Borde redondeado solo arriba */
+        }
+
+        header h1 {
+            color: #F0F0F0; /* Color Gris claro */
+            text-align: left;
+            margin: 0;
+            font-size: 32px; /* Tamaño de la fuente */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #9B6D71; /* Fondo Morado claro */
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #F0F0F0; /* Color Gris claro */
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            text-transform: uppercase; /* Convertir a Mayúsculas */
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: #9B6D71; /* Fondo Morado claro */
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+        }
+
+        nav ul ul li {
+            display: block;
+            margin: 10px 0;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        footer {
+            background-color: #6C4A4E; /* Fondo Morado oscuro */
+            color: #F0F0F0; /* Color Gris claro */
+            text-align: center;
+            padding: 20px;
+            border-radius: 0 0 10px 10px; /* Borde redondeado solo abajo */
+            border: 5px solid #6C4A4E; /* Marco Morado oscuro */
+            margin-top: 20px; /* Añadir espacio arriba */
+        }
+
+        main h2 {
+            text-transform: uppercase; /* Convertir a Mayúsculas */
+            font-size: 32px; /* Tamaño de la fuente */
+            text-align: center; /* Centrar el texto */
+            color: #6C4A4E; /* Color Morado oscuro */
+        }
+
+        main p {
+            text-align: center; /* Centrar el texto */
+            margin-top: 20px; /* Añadir espacio arriba del párrafo */
+            margin-bottom: 20px; /* Añadir espacio abajo del párrafo */
+            font-size: 20px; /* Tamaño de la fuente */
+            color: #6C4A4E; /* Color Morado oscuro */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-content p {
+            font-size: 20px;
+            color: #F0F0F0; /* Color Gris claro */
+        }
+
+        .footer-content a {
+            text-decoration: none;
+            color: #F0F0F0; /* Color Gris claro */
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>UNIVERSIDAD CAROLINA</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Materias</a>
+                        <ul>
+                            <li><a href="#">Administración II</a></li>
+                            <li><a href="#">Ciencias de la comunicación II</a></li>
+                            <li><a href="#">Calculo integral</a></li>
+                            <li><a href="#">Ecología y medio ambiente</a></li>
+                            <li><a href="#">Economía II</a></li>
+                            <li><a href="#">Filosofía</a></li>
+                            <li><a href="#">Inglés VI</a></li>
+                            <li><a href="#">Metodología de la investigación</a></li>
+                            <li><a href="#">Taller programación V</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Dudas</a></li>
+                    <li><a href="#">Gráficas</a></li>
+                    <li><a href="#">Encuestas</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Educación Dragon</h2>
+            <p>Con esta página se busca ayudar a los alumnos de la Universidad Carolina con las dudas que tengan en específico para no reprobar materias.</p>
+            <!-- Aquí va el contenido principal de la página -->
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>© 2024 Universidad Carolina</p>
+            <p>Personal: 1000+</p>
+            <p><a href="mailto:info@universidadcarolina.com">Más información</a></p>
+            <p><time datetime="2024-02-23" id="fechaActual"></time></p>
+        </div>
+    </footer>
+
+    <script>
+        // Obtener la fecha actual
+        var fechaActual = new Date();
+        // Formato de la fecha
+        var opcionesFecha = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        // Establecer la fecha actual
+        document.getElementById('fechaActual').textContent = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
+    </script>
+</body>
+</
